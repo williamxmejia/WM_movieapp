@@ -1,14 +1,13 @@
 function getMovies() {
     fetch("https://yellow-silky-petroleum.glitch.me/movies").then(resp => resp.json()).then(data => {
-            const movies = document.getElementById('movies-text');
-            for (let i = 0; i < data.length; i++) {
-                let title = data[i].title;
-                let year =  data[i].year;
-                let rating = data[i].rating;
-                let actors = data[i].actors;
-                let image = data[i].poster;
-                movies.innerHTML =
-                    `<div className="card" style="width: 18rem;" id="movies-text">
+        const movies = document.getElementById('movies-text');
+        for (let i = 0; i < data.length; i++) {
+            let title = data[i].title;
+            let year = data[i].year;
+            let rating = data[i].rating;
+            let actors = data[i].actors;
+            let image = data[i].poster;
+            movies.innerHTML = `<div className="card" style="width: 18rem;" id="movies-text">
     <img src=${image} alt="...">
         <div className="card-body">
             <h5 className="card-title"> ${title}</h5>
@@ -25,10 +24,8 @@ function getMovies() {
         </div>
                 </div>`
 
-            }
         }
-    )
-
+    })
 }
 
 // function getTitle(){

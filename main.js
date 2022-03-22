@@ -9,7 +9,7 @@ function getMovies() {
     fetch(moviesURL).then(resp => resp.json()).then(data => {
         const movies = document.getElementById('i');
         console.log(data)
-        html = "";
+        let html = "";
         html += '<div class="d-flex" id ="contain">'
         for (let i = 0; i < data.length; i++) {
             let title = data[i].title;
@@ -56,20 +56,6 @@ function getMovies() {
     })
 
 }
-
-// let btn = document.getElementById('title');
-// let addItem = document.getElementById('characters');
-// let div = document.getElementById('characters-list')
-// btn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     let value = addItem.value;
-// //     console.log(value)
-// //     let movieTitle = document.createElement("p");
-// //     movieTitle.append(value);
-// //     div.append(movieTitle)
-//
-// })
-
 
 // function addMovie() {
 let btn = document.getElementById('title');
